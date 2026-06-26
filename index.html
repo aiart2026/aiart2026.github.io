@@ -1175,25 +1175,24 @@ The authors of selected high-quality papers will be invited to submit an extende
 <section class="bg-primary" id="sponsorship">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto text-center sponsor-section-box">
-
+      <div class="col-lg-10 mx-auto text-center">
         <h2 class="section-heading text-white">Sponsorship</h2>
         <hr class="light my-4">
 
         <style>
-          .sponsor-section-box {
+          #sponsorship .container {
             position: relative;
           }
 
-          /* 左侧 Miora IP 装饰图，不影响中间内容居中 */
-          .miora-ip {
+          #sponsorship .miora-ip {
             position: absolute;
-            left: 40px;
-            top: 55%;
+            left: 45px;
+            top: 50%;
             transform: translateY(-50%);
             width: 150px;
             height: auto;
-            z-index: 2;
+            z-index: 1;
+            pointer-events: none;
             animation: mioraFloat 3s ease-in-out infinite;
           }
 
@@ -1209,89 +1208,28 @@ The authors of selected high-quality papers will be invited to submit an extende
             }
           }
 
-          .sponsor-content-card {
-            width: 100%;
-            max-width: 520px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 22px 30px;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            border-radius: 4px;
-          }
-
-          .sponsor-title {
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 14px;
-          }
-
-          .sponsor-logo {
-            width: 100%;
-            max-width: 330px;
-            height: auto;
-            display: block;
-            margin: 0 auto 14px auto;
-          }
-
-          .sponsor-desc {
-            text-align: justify;
-            color: #ffffff;
-            font-size: 14px;
-            line-height: 1.7;
-            margin: 0 auto;
-          }
-
           @media (max-width: 768px) {
-            .miora-ip {
-              position: static;
-              display: block;
-              width: 130px;
-              margin: 0 auto 20px auto;
-              transform: none;
-              animation: mioraFloatMobile 3s ease-in-out infinite;
-            }
-
-            @keyframes mioraFloatMobile {
-              0% {
-                transform: translateY(0);
-              }
-              50% {
-                transform: translateY(-8px);
-              }
-              100% {
-                transform: translateY(0);
-              }
-            }
-
-            .sponsor-content-card {
-              max-width: 100%;
-              padding: 20px 18px;
-            }
-
-            .sponsor-desc {
-              font-size: 13px;
+            #sponsorship .miora-ip {
+              display: none;
             }
           }
         </style>
 
-        <!-- Left decoration: Miora IP -->
         <img src="images/miora.png"
              alt="Miora IP"
              class="miora-ip">
 
-        <!-- Center sponsor content -->
-        <div class="sponsor-content-card">
+        <div class="text-faded mb-0" style="text-align: center; color: white; font-size: 18px; line-height: 1.8">
 
-          <div class="sponsor-title">
+          <h4 class="section-heading text-white" style="margin-bottom: 25px;">
             Tencent Cloud | Miora
-          </div>
+          </h4>
 
-          <img src="images/tencent.png"
+          <img src="images/tencent.png" 
                alt="Tencent Cloud | Miora Logo"
-               class="sponsor-logo">
+               style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto 30px auto;" />
 
-          <p class="sponsor-desc">
+          <p style="text-align: justify; color: white; font-size: 18px; line-height: 1.8; margin-bottom: 0;">
             Miora is an agentic creative studio that turns a brief into production-ready creative assets across script, storyboard, video, UI/UX, illustration, 3D and brand systems — all on one editable canvas.
           </p>
 
@@ -1328,6 +1266,7 @@ The authors of selected high-quality papers will be invited to submit an extende
     </div>
   </div>
 </section>
+
 
 
  
