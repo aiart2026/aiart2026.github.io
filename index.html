@@ -1172,26 +1172,127 @@ The authors of selected high-quality papers will be invited to submit an extende
   </div>
 </section>
 
+```html
 <section class="bg-primary" id="sponsorship">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
+
         <h2 class="section-heading text-white">Sponsorship</h2>
         <hr class="light my-4">
 
-        <div class="text-faded mb-0" style="text-align: center; color: white; font-size: 18px; line-height: 1.8">
+        <style>
+          .sponsor-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+            margin-top: 25px;
+          }
 
-          <h4 class="section-heading text-white" style="margin-bottom: 25px;">
-            Tencent Cloud | Miora
-          </h4>
+          .sponsor-ip-box {
+            flex: 0 0 260px;
+            text-align: center;
+          }
 
-          <img src="images/tencent.png" 
-               alt="Tencent Cloud | Miora Logo"
-               style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto 30px auto;" />
+          .sponsor-ip {
+            width: 100%;
+            max-width: 230px;
+            height: auto;
+            animation: ipFloat 3s ease-in-out infinite;
+          }
 
-          <p style="text-align: justify; color: white; font-size: 18px; line-height: 1.8; margin-bottom: 0;">
-            Miora is an agentic creative studio that turns a brief into production-ready creative assets across script, storyboard, video, UI/UX, illustration, 3D and brand systems — all on one editable canvas.
-          </p>
+          @keyframes ipFloat {
+            0% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-12px);
+            }
+            100% {
+              transform: translateY(0px);
+            }
+          }
+
+          .sponsor-card {
+            flex: 0 1 560px;
+            text-align: center;
+            padding: 28px 35px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+          }
+
+          .sponsor-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 22px;
+            letter-spacing: 0.3px;
+          }
+
+          .sponsor-logo {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px auto;
+          }
+
+          .sponsor-desc {
+            text-align: justify;
+            color: #ffffff;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 0;
+          }
+
+          @media (max-width: 768px) {
+            .sponsor-wrapper {
+              flex-direction: column;
+              gap: 25px;
+            }
+
+            .sponsor-ip-box {
+              flex: none;
+            }
+
+            .sponsor-ip {
+              max-width: 180px;
+            }
+
+            .sponsor-card {
+              padding: 24px 22px;
+            }
+
+            .sponsor-desc {
+              font-size: 16px;
+            }
+          }
+        </style>
+
+        <div class="sponsor-wrapper">
+
+          <!-- Left: IP animation -->
+          <div class="sponsor-ip-box">
+            <img src="images/miora.gif"
+                 alt="AIART IP Mascot"
+                 class="sponsor-ip">
+          </div>
+
+          <!-- Right: Sponsor information -->
+          <div class="sponsor-card">
+
+            <img src="images/tencent.png"
+                 alt="Tencent Cloud | Miora Logo"
+                 class="sponsor-logo">
+
+            <p class="sponsor-desc">
+              Miora is an agentic creative studio that turns a brief into production-ready creative assets across script, storyboard, video, UI/UX, illustration, 3D and brand systems — all on one editable canvas.
+            </p>
+
+          </div>
 
         </div>
 
@@ -1226,6 +1327,8 @@ The authors of selected high-quality papers will be invited to submit an extende
     </div>
   </div>
 </section>
+```
+
  
 
   
