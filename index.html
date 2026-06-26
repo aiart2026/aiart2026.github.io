@@ -1172,127 +1172,128 @@ The authors of selected high-quality papers will be invited to submit an extende
   </div>
 </section>
 
-```html
 <section class="bg-primary" id="sponsorship">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto text-center">
+      <div class="col-lg-10 mx-auto text-center sponsor-section-box">
 
         <h2 class="section-heading text-white">Sponsorship</h2>
         <hr class="light my-4">
 
         <style>
-          .sponsor-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 45px;
-            margin-top: 25px;
+          .sponsor-section-box {
+            position: relative;
           }
 
-          .sponsor-ip-box {
-            flex: 0 0 260px;
-            text-align: center;
-          }
-
-          .sponsor-ip {
-            width: 100%;
-            max-width: 230px;
+          /* 左侧 Miora IP 装饰图，不影响中间内容居中 */
+          .miora-ip {
+            position: absolute;
+            left: 40px;
+            top: 55%;
+            transform: translateY(-50%);
+            width: 150px;
             height: auto;
-            animation: ipFloat 3s ease-in-out infinite;
+            z-index: 2;
+            animation: mioraFloat 3s ease-in-out infinite;
           }
 
-          @keyframes ipFloat {
+          @keyframes mioraFloat {
             0% {
-              transform: translateY(0px);
+              transform: translateY(-50%) translateY(0);
             }
             50% {
-              transform: translateY(-12px);
+              transform: translateY(-50%) translateY(-10px);
             }
             100% {
-              transform: translateY(0px);
+              transform: translateY(-50%) translateY(0);
             }
           }
 
-          .sponsor-card {
-            flex: 0 1 560px;
+          .sponsor-content-card {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
             text-align: center;
-            padding: 28px 35px;
+            padding: 22px 30px;
             border: 1px solid rgba(255, 255, 255, 0.35);
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.06);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
           }
 
           .sponsor-title {
             color: #ffffff;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 22px;
-            letter-spacing: 0.3px;
+            margin-bottom: 14px;
           }
 
           .sponsor-logo {
             width: 100%;
-            max-width: 360px;
+            max-width: 330px;
             height: auto;
             display: block;
-            margin: 0 auto 25px auto;
+            margin: 0 auto 14px auto;
           }
 
           .sponsor-desc {
             text-align: justify;
             color: #ffffff;
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0 auto;
           }
 
           @media (max-width: 768px) {
-            .sponsor-wrapper {
-              flex-direction: column;
-              gap: 25px;
+            .miora-ip {
+              position: static;
+              display: block;
+              width: 130px;
+              margin: 0 auto 20px auto;
+              transform: none;
+              animation: mioraFloatMobile 3s ease-in-out infinite;
             }
 
-            .sponsor-ip-box {
-              flex: none;
+            @keyframes mioraFloatMobile {
+              0% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-8px);
+              }
+              100% {
+                transform: translateY(0);
+              }
             }
 
-            .sponsor-ip {
-              max-width: 180px;
-            }
-
-            .sponsor-card {
-              padding: 24px 22px;
+            .sponsor-content-card {
+              max-width: 100%;
+              padding: 20px 18px;
             }
 
             .sponsor-desc {
-              font-size: 16px;
+              font-size: 13px;
             }
           }
         </style>
 
-        <div class="sponsor-wrapper">
+        <!-- Left decoration: Miora IP -->
+        <img src="images/miora.png"
+             alt="Miora IP"
+             class="miora-ip">
 
-          <!-- Left: IP animation -->
-          <div class="sponsor-ip-box">
-            <img src="images/miora.png"
-                 alt="AIART IP Mascot"
-                 class="sponsor-ip">
+        <!-- Center sponsor content -->
+        <div class="sponsor-content-card">
+
+          <div class="sponsor-title">
+            Tencent Cloud | Miora
           </div>
 
-          <!-- Right: Sponsor information -->
-          <div class="sponsor-card">
+          <img src="images/tencent.png"
+               alt="Tencent Cloud | Miora Logo"
+               class="sponsor-logo">
 
-            <img src="images/tencent.png"
-                 alt="Tencent Cloud | Miora Logo"
-                 class="sponsor-logo">
-
-            <p class="sponsor-desc">
-              Miora is an agentic creative studio that turns a brief into production-ready creative assets across script, storyboard, video, UI/UX, illustration, 3D and brand systems — all on one editable canvas.
-            </p>
-
-          </div>
+          <p class="sponsor-desc">
+            Miora is an agentic creative studio that turns a brief into production-ready creative assets across script, storyboard, video, UI/UX, illustration, 3D and brand systems — all on one editable canvas.
+          </p>
 
         </div>
 
@@ -1327,7 +1328,7 @@ The authors of selected high-quality papers will be invited to submit an extende
     </div>
   </div>
 </section>
-```
+
 
  
 
